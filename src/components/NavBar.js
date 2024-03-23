@@ -7,7 +7,7 @@ const NavBar = () => {
     return ( 
     <Navbar className={styles.NavBar} expand="md" fixed="top"><Container>
     <Navbar.Brand className="text-white">FOOTIEMEDIA</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Toggle className="bg-white" aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto text-left">
         <Nav.Link className="text-white"><i className="fa-regular fa-futbol"></i>Home</Nav.Link>
