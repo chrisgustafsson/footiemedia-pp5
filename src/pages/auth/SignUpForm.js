@@ -14,19 +14,16 @@ const SignUpForm = () => {
           <Form>
             <Form.Group controlId="formBasicUsername">
               <Form.Label>Username</Form.Label>
-              <Form.Control type="text" placeholder="Enter your username" />
+              <Form.Control type="text" placeholder="Enter your username" name="username" />
             </Form.Group>
-
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
-
-            <Form.Group controlId="formBasicPassword">
+            <Form.Group controlId="formBasicPassword1">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" placeholder="Choose a password" name="password1" />
             </Form.Group>
-
+            <Form.Group controlId="formBasicPassword2">
+              <Form.Label>Password Confirmation</Form.Label>
+              <Form.Control type="password" placeholder="Confirm your password" name="password2" />
+            </Form.Group>
             <Button variant="success" type="submit" size="lg" block>
               SIGN UP
             </Button>
