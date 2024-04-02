@@ -1,9 +1,6 @@
 import React, {useState} from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
-import styles from "../../styles/SignInUpForm.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
 import axios from "axios";
 
 const SignUpForm = () => {
@@ -41,7 +38,7 @@ const SignUpForm = () => {
         <Container className="p-4">
           <h1>SIGN UP</h1>
           <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formBasicUsername">
+            <Form.Group controlId="username">
               <Form.Label>Username</Form.Label>
               <Form.Control type="text" placeholder="Enter your username" name="username" value={username} onChange={handleChange} />
             </Form.Group>
@@ -50,7 +47,7 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
-            <Form.Group controlId="formBasicPassword1">
+            <Form.Group controlId="password1">
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Choose a password" name="password1" value={password1} onChange={handleChange} />
             </Form.Group>
@@ -59,7 +56,7 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
-            <Form.Group controlId="formBasicPassword2">
+            <Form.Group controlId="password2">
               <Form.Label>Password Confirmation</Form.Label>
               <Form.Control type="password" placeholder="Confirm your password" name="password2" value={password2} onChange={handleChange} />
             </Form.Group>
@@ -79,7 +76,7 @@ const SignUpForm = () => {
           </Form>
         </Container>
         <Container className="mt-3">
-          <Link className="login-link" to="/signin">Already have an account? Sign in</Link>
+          <Link to="/signin">Already have an account? Sign in</Link>
         </Container>
       </Col>
     </Row>
