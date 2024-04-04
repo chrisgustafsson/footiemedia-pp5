@@ -20,15 +20,15 @@ const NavBar = () => {
     };
 
     const addPost = (
-      <NavLink to="/posts/add" className="text-white"><i className="fa-solid fa-arrow-up-from-bracket"></i>Upload post</NavLink>
-    )
+        <NavLink to="/posts/add" className="text-white"><i className="fa-solid fa-arrow-up-from-bracket"></i>Upload post</NavLink>
+    );
     const loggedIn = (
-    <>
-      <NavLink to="/favorites" className="text-white"><i className="fa-solid fa-heart-pulse"></i>Favorites</NavLink>
-      <NavLink to="/" className="text-white" onClick={handleSignOut}><i className="fas fa-sign-out-alt"></i>Sign out</NavLink>
-      <NavLink to={'/profiles/${currentUser?.profile_id}'} className="text-white"><Avatar src={currentUser?.profile_image} text="Profile" height={40} /></NavLink>
-    </>
-    )
+      <>
+        <NavLink to="/favorites" className="text-white"><i className="fa-solid fa-heart-pulse"></i>Favorites</NavLink>
+        <NavLink to="/" className="text-white" onClick={handleSignOut}><i className="fas fa-sign-out-alt"></i>Sign out</NavLink>
+        <NavLink to={`/profiles/${currentUser?.profile_id}`} className="text-white"><Avatar src={currentUser?.profile_image} text="Profile" height={40} /></NavLink>
+      </>
+    );
     const loggedOut = (
       <>
         <NavLink to="/signin" className="text-white"><i className="fas fa-sign-in-alt"></i>Sign in</NavLink>
