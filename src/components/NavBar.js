@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from 'react-router-dom';
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 
 const NavBar = () => {
@@ -15,7 +16,7 @@ const NavBar = () => {
     <>
       <NavLink to="/favorites" className="text-white"><i className="fa-solid fa-heart-pulse"></i>Favorites</NavLink>
       <NavLink to="/" className="text-white" onClick={() => {}}><i className="fas fa-sign-out-alt"></i>Sign out</NavLink>
-      <NavLink to={'/profiles/${currentUser?.profile_id}'} className="text-white"><img src={currentUser?.profile_image} /></NavLink>
+      <NavLink to={'/profiles/${currentUser?.profile_id}'} className="text-white"><Avatar src={currentUser?.profile_image} text="Profile" height={40} /></NavLink>
     </>
     )
     const loggedOut = (
