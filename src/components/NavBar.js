@@ -7,6 +7,10 @@ import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
+
+    const addPost = (
+      <NavLink to="/posts/add" className="text-white"><i className="fa-solid fa-arrow-up-from-bracket"></i>Upload post</NavLink>
+    )
     const loggedIn = <>{currentUser?.username}</>
     const loggedOut = (
       <>
@@ -18,6 +22,7 @@ const NavBar = () => {
     return ( 
     <Navbar className={styles.NavBar} expand="md" fixed="top"><Container>
     <NavLink to="/"><Navbar.Brand className="text-white">FOOTIEMEDIA</Navbar.Brand></NavLink>
+    {currentUser && addPost}
     <Navbar.Toggle className="bg-white" aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto text-left">
