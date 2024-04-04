@@ -4,6 +4,7 @@ import styles from "../styles/NavBar.module.css";
 import { NavLink } from 'react-router-dom';
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
+import axios from "axios";
 
 
 const NavBar = () => {
